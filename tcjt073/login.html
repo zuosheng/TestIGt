@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<script type="text/javascript">
+    	function login(){
+			var uname = document.getElementById("username").value;
+			var pwd = document.getElementById("password").value;
+			if(""==uname){
+				document.getElementById("resultUsername").innerHTML = "请输入用户名!";
+				return false;
+			}
+			if(""==pwd){
+				document.getElementById("resultPassword").innerHTML = "请输入密码!";
+				return false;
+			}
+			if("admin"==uname && "1234"==pwd){
+				document.getElementById("loginForm").action = "main/main.html";
+				document.getElementById("loginForm").submit();
+			}else{
+				alert("对不起，用户名或者密码错误!");
+			}
+		}
+		function focusByLogin(){
+			document.getElementById("username").value="";
+			document.getElementById("resultUsername").innerHTML="";
+		}
+		function focusByPassword(){
+			document.getElementById("password").value="";
+			document.getElementById("resultPassword").innerHTML = "";
+		}
+		function bulrByLogin(){
+			var uname = document.getElementById("username").value;
+			if(""==uname){
+				document.getElementById("resultUsername").innerHTML="请输入用户名!";
+				return false;
+			}
+			if(uname.length<=4 || uname.length>10){
+				document.getElementById("resultUsername").innerHTML = "用户名必须5-10位之间";
+				return false;
+			}
+		}
+    
+    </script>
+</head>
+
+<body>
+
+	<form  id="loginForm" action="" method="post">
+    	<table style="margin-top:180px" border="1" width="60%" align="center">
+        	<tr>
+            	<th align="right" width="25%">用户名:</th>
+                <td width="35%">
+                	<input onblur="bulrByLogin();" onfocus="focusByLogin();" id="username" type="text" name="username" />
+                </td>
+                <td id="resultUsername"></td>
+            </tr>
+            <tr>
+            	<th align="right">密码:</th>
+                <td>
+                	<input onfocus="focusByPassword();" id="password" type="password" name="password" />
+                </td>
+                <td id="resultPassword"></td>
+            </tr>
+            <tr>
+            	
+                <td colspan="3" align="center">
+                	<input type="submit"  value="登录" onclick="login();"/>
+                </td>
+            </tr>
+       </table>
+   </form>
+</body>
+</html>

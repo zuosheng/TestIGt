@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<script type="text/javascript">
+    	function updateStudent(){
+			document.getElementById("studentForm").action="listStudent.html";
+			document.getElementById("studentForm").submit();
+		}
+    
+    </script>
+</head>
+
+<body>
+<form id="studentForm" action="" method="post">
+    
+    
+    	<table border="1" width="97%" align="center">
+        
+        	<tr>
+            	<th width="30%" align="right">班级名称:</th>
+                <td>
+                	<select name="gradename">
+                    	<option value="00">--请选择--</option>
+                        <option value="73">TCJT073</option>
+                        <option value="70">TCJT070</option>
+                        <option value="76" selected="selected">TCJT076</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<th align="right">学生姓名:</th>
+                <td>
+                	<input id="stuname" type="text" value="杨凯" name="stuname" />
+                </td>
+            </tr>
+        	 <tr>
+            	<th align="right">年龄:</th>
+                <td>
+                	<input type="text" name="age" value="38" />
+                </td>
+            </tr>
+             <tr>
+            	<th align="right">学号:</th>
+                <td>
+                	<input type="text" name="stunum" value="0054444944" />
+                </td>
+            </tr>
+            <tr>
+            	<th align="right">性别:</th>
+                <td>
+                	<select name="gender">
+                    	<option value="00">--请选择--</option>
+                        <option value="01">男</option>
+                        <option value="02">女</option>
+                        <option value="03" selected="selected">不详</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<th align="right">还是性别:</th>
+                <td>
+                	<input type="radio" name="sex" value="01" />男
+                    <input type="radio" name="sex" value="02" />女
+                    <input checked="checked" type="radio" name="sex" value="03" />不详
+                </td>
+            </tr>
+            <tr>
+            	<th align="right">爱好:</th>
+                <td>
+                	<input checked="checked" type="checkbox" name="hobby" value="01" />抽烟
+                    <input type="checkbox" name="hobby" value="02" />喝酒
+                    <input checked="checked" type="checkbox" name="hobby" value="03" />去燕郊
+                </td>
+            </tr>
+            <tr>
+            	<td colspan="2" align="center">
+                	<input type="button" value="修改学生信息" onclick="updateStudent();" />
+                </td>
+            </tr>
+        
+        
+        </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </form>
+</body>
+</html>

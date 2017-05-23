@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	function addStudent(){
+		
+		document.getElementById("studentForm").action="addStudent.html";
+		document.getElementById("studentForm").submit();
+	}
+
+
+</script>
+</head>
+
+<body>
+	
+
+	<form id="studentForm" action="" method="post">
+    
+    	<table border="1" width="97%" align="center">
+        
+        	<tr>
+            	<th>班级名称</th>
+                <th>学生编号</th>
+                <th>学生姓名</th>
+                <th>学号</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>操作</th>
+             
+            </tr>
+            <tr>
+            	<td>TCJT073</td>
+                <td>9527</td>
+                <td>杨凯</td>
+                <td>0054444944</td>
+                <td>38</td>
+                <td>不详</td>
+                <td>
+                	<a href="detailStudent.html">查看</a>
+                    <a href="updateStudent.html">修改</a>
+                    <a href="../left.html" onclick="return confirm('确认删除该学生吗?');">删除</a>
+                </td>
+            </tr>
+        	<tr>
+            	<td>TCJT073</td>
+                <td>9527</td>
+                <td>兵哥哥</td>
+                <td>0054444944</td>
+                <td>38</td>
+                <td>不详</td>
+                <td>
+                	<a href="">查看</a>
+                    <a href="">修改</a>
+                    <a href="">删除</a>
+                </td>
+            </tr>
+        	<tr>
+            	<td>TCJT073</td>
+                <td>9527</td>
+                <td>B超</td>
+                <td>0054444944</td>
+                <td>38</td>
+                <td>不详</td>
+                <td>
+                	<a href="">查看</a>
+                    <a href="">修改</a>
+                    <a href="">删除</a>
+                </td>
+            </tr>
+        
+        	<tr>
+            	<td colspan="7" align="center">
+                  	<input type="button" value="新增学生信息" onclick="addStudent();" />  
+	             </td>
+            </tr>
+        
+        
+        
+        </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
